@@ -1,0 +1,27 @@
+.tab-menu {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    
+  }
+  
+  .tab-btn {
+    background-color: #f1f1f1;
+    border: none;
+    color: black;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: 0.3s;
+  }
+  
+  .tab-btn.active {
+    background-color: #ccc;
+  }
+  
+  .tab-content {
+    display: none;
+  }
+  
+  .tab-content.active {
+    display: block;
+  }

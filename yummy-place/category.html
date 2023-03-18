@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>카테고리 선택</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/includeHTML.js" defer></script>
+</head>
+
+<body>
+    <header data-include="./component/header.html"></header>
+
+    <div class="tab-menu">
+        <button class="tab-btn active" onclick="openTab(event, 'tab1')">종류</button>
+        <button class="tab-btn" onclick="openTab(event, 'tab2')">상황</button>
+        <button class="tab-btn" onclick="openTab(event, 'tab3')">재료</button>
+      </div>
+      
+      <div id="tab1" class="tab-content active">
+        <h2>Tab 1 content</h2>
+        <p>한식. 양식. 중식. 일식. 아시안. 퓨전. 분식. 카페. 뷔페</p>
+      </div>
+      
+      <div id="tab2" class="tab-content">
+        <h2>Tab 2 content</h2>
+        <p>가족모임. 데이트. 업무미팅. 간단한끼니, 혼밥. 기념일</p>
+      </div>
+      
+      <div id="tab3" class="tab-content">
+        <h2>Tab 3 content</h2>
+        <p>고기. 해산물. 채식</p>
+      </div>
+      
+    <footer data-include="./component/footer.html"></footer>
+
+    <script src="js/category.js"></script>
+</body>
+
+</html>

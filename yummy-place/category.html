@@ -2,42 +2,61 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-    <title>카테고리 선택</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/includeHTML.js" defer></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+  <title>카테고리 선택</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="./js/includeHTML.js" defer></script>
+  <script src="./js/category.js"></script>
 </head>
 
 <body>
-    <header data-include="./component/header.html"></header>
+  <header data-include="./component/header.html"></header>
 
-    <div class="tab-menu">
-        <button class="tab-btn active" onclick="openTab(event, 'tab1')">종류</button>
-        <button class="tab-btn" onclick="openTab(event, 'tab2')">상황</button>
-        <button class="tab-btn" onclick="openTab(event, 'tab3')">재료</button>
-      </div>
-      
-      <div id="tab1" class="tab-content active">
-        <h2>Tab 1 content</h2>
-        <p>한식. 양식. 중식. 일식. 아시안. 퓨전. 분식. 카페. 뷔페</p>
-      </div>
-      
-      <div id="tab2" class="tab-content">
-        <h2>Tab 2 content</h2>
-        <p>가족모임. 데이트. 업무미팅. 간단한끼니, 혼밥. 기념일</p>
-      </div>
-      
-      <div id="tab3" class="tab-content">
-        <h2>Tab 3 content</h2>
-        <p>고기. 해산물. 채식</p>
-      </div>
-      
-    <footer data-include="./component/footer.html"></footer>
+  <div class="tab-menu">
+    <button class="tab-btn active" onclick="openTab(event, 'tab1')" value="종류">
+      <button class="tab-btn" onclick="openTab(event, 'tab2')" value="상황">
+        <button class="tab-btn" onclick="openTab(event, 'tab3')" value="재료">
+  </div>
 
-    <script src="js/category.js"></script>
+  <div id="tab1" class="tab-content active">
+    <ul>
+      <li><a href="#">한식</a></li>
+      <li value="123">양식</li>
+      <li>중식</li>
+      <li>일식</li>
+      <li>분식</li>
+      <li>카페</li>
+    </ul>
+  </div>
+
+  <div id="tab2" class="tab-content">
+    <ul>
+      <li>가족모임</li>
+      <li>데이트</li>
+      <li>혼밥</li>
+      <li>회식</li>
+    </ul>
+  </div>
+
+  <div id="tab3" class="tab-content">
+    <ul>
+      <li>고기</li>
+      <li>해산물</li>
+      <li>채식</li>
+    </ul>
+  </div>
+
+  <footer data-include="./component/footer.html"></footer>
+
+  
+  <script>
+    loadButton();
+    selectSubCategory();
+    createCategory();
+  </script>
 </body>
 
 </html>
